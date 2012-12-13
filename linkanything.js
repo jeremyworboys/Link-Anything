@@ -32,7 +32,6 @@
       var $this, href;
       e.preventDefault();
       e.stopPropagation();
-      console.log(e);
       $this = $(this);
       if ($this.is(".disabled, :disabled")) {
         return;
