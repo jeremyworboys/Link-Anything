@@ -30,8 +30,6 @@
 
     LinkAnything.prototype.scoot = function(e) {
       var $this, href;
-      e.preventDefault();
-      e.stopPropagation();
       $this = $(this);
       if ($this.is(".disabled, :disabled")) {
         return;
@@ -40,7 +38,7 @@
         return;
       }
       window.location = href;
-      return false;
+      return null;
     };
 
     return LinkAnything;
