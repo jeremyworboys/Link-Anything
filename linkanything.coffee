@@ -1,7 +1,7 @@
 ### ==========================================================
  * linkanything.js v1.0.0
  * ==========================================================
- * Copyright 2012 Jeremy Worboys.
+ * Copyright 2012 Jeremy Worboys <jw@jeremyworboys.com>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,16 +26,13 @@
             $el = $(element).on "click.linkanything.data-api", @scoot
 
         scoot: (e) ->
-            e.preventDefault()
-            e.stopPropagation()
-
             $this = $(this)
             return if $this.is ".disabled, :disabled"
 
             return unless (href = $this.data("href"))
 
             window.location = href
-            false
+            null
 
 
     $::linkanything = (option) ->
