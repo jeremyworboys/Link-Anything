@@ -29,8 +29,6 @@
             e.preventDefault()
             e.stopPropagation()
 
-            console.log e
-
             $this = $(this)
             return if $this.is ".disabled, :disabled"
 
